@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Dockerfile: Compose Deployment" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+  <configuration default="false" name="build" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
     <deployment type="dockerfile">
       <settings>
         <option name="buildKitEnabled" value="true" />
         <option name="containerName" value="" />
-        <option name="commandLineOptions" value="--rm -it --net=host -privileged" />
+        <option name="commandLineOptions" value="--rm -it --net=host --privileged" />
         <option name="showCommandPreview" value="true" />
         <option name="sourceFilePath" value="Dockerfile" />
       </settings>
