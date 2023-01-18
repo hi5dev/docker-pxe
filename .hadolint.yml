@@ -1,0 +1,3 @@
+---
+ignored:
+  - DL3059 # multiple consecutive RUN instructions
