@@ -1,6 +1,6 @@
 FROM alpine:3.17.0
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash="5.2.15-r0"
 
 COPY ./etc/ /etc/
 COPY ./libexec/ /usr/libexec/docker-pxe/
