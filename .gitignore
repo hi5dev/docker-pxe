@@ -1,5 +1,12 @@
-.vagrant/
+### IDE Generated Files
+/.idea/
 
+### Vagrant
+/.vagrant/
+
+### Temporary/Log Files
+/tmp/
 *.log
 
-/.idea/
+### Files to Keep
+!.keep
