@@ -2,16 +2,12 @@ FROM alpine:3.17.0
 
 RUN apk add --no-cache bash="5.2.15-r0"
 
-COPY ./etc/ /etc/
 COPY ./libexec/ /usr/libexec/docker-pxe/
-
 WORKDIR /usr/libexec/docker-pxe
-RUN ./setup-dnsmasq \
- && ./setup-memtest \
- && ./setup-syslinux \
- && ./create-tftp-user \
- && ./tftp-files
+RUN ./setup-dnsmasq && ./setup-memtest && ./setup-syslinux
 
+COPY ./etc/ /etc/
+RUN ./create-tftp-user
 WORKDIR /home/tftp
 USER tftp
 
