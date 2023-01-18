@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -exo pipefail
+
+export DOCKER_BUILDKIT=1
+
+docker build -t docker-pxe .
+
+docker run --rm -it --net=host --privileged docker-pxe

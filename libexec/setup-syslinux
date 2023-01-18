@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -exo pipefail
+
+# for installing the SYSLINUX bootloader for PXE network booting
+syslinux_version=${syslinux_version:-"6.04_pre1-r11"}
+
+# setup-syslinux has some perl scripts, but it's not listed as a dependency in the apk, so download it manually
+perl_version=${perl_version:-"5.36.0-r0"}
+
+# install packages
+apk add --no-cache syslinux="$syslinux_version" perl="$perl_version"

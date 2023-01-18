@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -exo pipefail
+
+# default package versions
+dnsmasq_version=${dnsmasq_version-"2.87-r0"}
+libcap_utils_version=${libcap_utils_version:-"2.66-r0"}
+
+# install packages
+apk add --no-cache dnsmasq="$dnsmasq_version" libcap-utils="$libcap_utils_version"
+
+# set the required capabilities for dnsmasq to run as a non-root user
+setcap -q 'cap_net_bind_service+ep cap_net_admin+ep cap_net_raw+ep' "$(which dnsmasq)"

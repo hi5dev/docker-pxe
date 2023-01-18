@@ -3,7 +3,8 @@ DEFAULT memtest86
 
 LABEL memtest86
   MENU LABEL Memtest86+
-  KERNEL /memtest/memtest86+
+  KERNEL /mt86plus/memtest32.bin
+
 # eventually include additional entries
 INCLUDE pxelinux.cfg/additional_menu_entries
 
