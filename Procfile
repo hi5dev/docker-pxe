@@ -1,2 +1,2 @@
-client: vagrant up
-server: docker compose up
+client: vagrant up --provision
+server: docker compose up --build
