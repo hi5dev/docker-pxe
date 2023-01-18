@@ -1,26 +1,32 @@
-# EditorConfig is awesome: http://EditorConfig.org
-# top-most EditorConfig file
+##
+# EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across
+# various editors and IDEs.
+#
+# https://editorconfig.org
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+##
+
+# Top-Most EditorConfig File
 root = true
 
-# Unix-style newlines at the bottom of every file
+# Default Rules
 [*]
-end_of_line = lf
+
+# File Encoding
 charset = utf-8
 
-# Tab indentation
-indent_style = space
-indent_size = 2
-
-# Make sure every file has a blank line at the end
+# EOL
+end_of_line = lf
 insert_final_newline = true
+max_line_length = 120
 
-# Remove any whitespace characters preceding newline characters
+# EOF
 trim_trailing_whitespace = true
 
-# Give operators breathing room, but not brackets
-spaces_around_operators = true
-spaces_around_brackets = false
+# Indentation/Tabulation
+indent_style = space
+indent_size = 2
+tab_width = 2
 
-# Max line length (not supported by all editors)
-# Enable this option by un-commenting the following line
-# max_line_length = 150
+# IntelliJ IDEs
+ij_wrap_on_typing = true
