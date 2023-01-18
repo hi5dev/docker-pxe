@@ -2,17 +2,17 @@
   <configuration default="false" name="server" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
     <deployment type="docker-compose.yml">
       <settings>
+        <option name="buildKitEnabledForCompose" value="true" />
         <option name="envFilePath" value="" />
         <option name="services">
           <list>
-            <option value="pxelinux" />
+            <option value="dnsmasq" />
           </list>
         </option>
         <option name="sourceFilePath" value="docker-compose.yml" />
+        <option name="upDetach" value="false" />
       </settings>
     </deployment>
-    <method v="2">
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="hadolint" run_configuration_type="ShConfigurationType" />
-    </method>
+    <method v="2" />
   </configuration>
 </component>
