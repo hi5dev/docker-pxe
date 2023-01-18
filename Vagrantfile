@@ -1,19 +1,24 @@
-VAGRANTFILE_API_VERSION = "2"
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 
-Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box='clink15/pxe'
+VM_CONFIG ||= {
+  cableconnected1: 'on',
+  cpus: 1,
+  memory: 512,
+  natdnshostresolver1: 'on',
+  natdnsproxy1: 'on',
+  natnet1: '192.168.56/24',
+  nattftpfile1: 'pxelinux.0',
+  nattftpserver1: '192.168.56.2',
+  boot1: 'net'
+}.freeze
 
-  config.vm.provider "virtualbox" do |v|
-    v.customize ["modifyvm", :id, "--cpus", 1]
-    v.customize ["modifyvm", :id, "--memory", 512]
-    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-    v.customize ["modifyvm", :id, "--nattftpfile1", "pxelinux.0"]
-    v.customize ["modifyvm", :id, "--nattftpserver1", "192.168.56.2"]
-    v.customize ["modifyvm", :id, "--natnet1", "192.168.56/24"]
-    v.customize ["modifyvm", :id, "--cableconnected1", "on"] # ensure that the network cable is connected. See chef/bento#688
-    v.gui = true
-  end
-
+# https://docs.vagrantup.com
+Vagrant.configure('2') do |config|
+  config.vm.box = 'clink15/pxe'
   config.vm.synced_folder '.', '/vagrant', disabled: true
+  config.vm.provider 'virtualbox' do |vb|
+    VM_CONFIG.each { |arg, val| vb.customize ['modifyvm', :id, "--#{arg}", val] }
+    vb.gui = true
+  end
 end
