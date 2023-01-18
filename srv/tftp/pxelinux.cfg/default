@@ -1,0 +1,18 @@
+# https://wiki.syslinux.org/wiki/index.php?title=Menu
+
+DEFAULT memtest86
+  SAY Now booting in the PXE Boot MENU...
+
+LABEL memtest86
+  MENU LABEL Memtest86+
+  KERNEL /mt86plus/memtest32.bin
+
+MENU TITLE Boot Menu
+
+INCLUDE pxelinux.cfg/theme.menu
+INCLUDE pxelinux.cfg/layout.menu
+
+PROMPT 1
+TIMEOUT 50
+
+UI menu.c32

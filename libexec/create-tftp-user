@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-set -exo pipefail
-
-# add a no-login user for the configuration files
-adduser -g GECOS -D tftp
-
-# add the user to the dnsmasq group so they can run it
-addgroup tftp dnsmasq

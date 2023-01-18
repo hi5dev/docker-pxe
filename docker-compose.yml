@@ -1,8 +1,21 @@
 version: "3.9"
 
 services:
-  pxelinux:
+  hadolint:
+    image: "hadolint/hadolint"
+    read_only: true
+    working_dir: "/mnt/docker-pxe"
+    command: ["hadolint", "Dockerfile"]
+    volumes:
+      - "./:/mnt/docker-pxe"
+
+  dnsmasq:
     build: "."
     network_mode: "host"
     privileged: true
     tty: true
+    command:
+      - "--dhcp-range=192.168.56.2,proxy"
+    volumes:
+      - "./etc/dnsmasq.d:/etc/dnsmasq.d"
+      - "./srv/tftp:/srv/tftp"

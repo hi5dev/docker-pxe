@@ -1,0 +1,16 @@
+# https://wiki.syslinux.org/wiki/index.php?title=Menu#Layout
+
+MENU CMDLINEROW       15
+MENU ENDROW           24
+MENU HELPMSGENDROW    -1
+MENU HELPMSGROW       22
+MENU HIDDENROW        -2
+MENU HSHIFT           0
+MENU MARGIN           10
+MENU PASSWORDMARGIN   3
+MENU PASSWORDROW      11
+MENU ROWS             10
+MENU TABMSGROW        15
+MENU TIMEOUTROW       16
+MENU VSHIFT           0
+MENU WIDTH            80
