@@ -1,2 +1,2 @@
 client: vagrant up
-server: docker-compose up
+server: docker compose up
