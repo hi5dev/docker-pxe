@@ -17,5 +17,4 @@ services:
     command:
       - "--dhcp-range=192.168.56.2,proxy"
     volumes:
-      - "./etc/dnsmasq.d:/etc/dnsmasq.d"
       - "./srv/tftp:/srv/tftp"
