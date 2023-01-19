@@ -1,11 +1,22 @@
 # https://wiki.syslinux.org/wiki/index.php?title=Menu#MENU_COLOR
 
-#            element      ansi      foreground  background  shadow
-MENU COLOR   title        1;34;49   #eea0a0ff   #cc333355   std
-MENU COLOR   sel          7;37;40   #ff000000   #bb9999aa   all
-MENU COLOR   border       0;30;44   #ffffffff   #00000000   std
-MENU COLOR   pwdheader    0;31;47   #eeff1010   #20ffffff   std
-MENU COLOR   hotkey       0;35;40   #90ffff00   #00000000   std
-MENU COLOR   hotsel       0;35;40   #90000000   #bb9999aa   all
-MENU COLOR   timeout_msg  0;35;40   #90ffffff   #00000000   none
-MENU COLOR   timeout      0;31;47   #eeff1010   #00000000   none
+#             element       ansi      foreground  background  shadow
+MENU COLOR    border        0;30;44   #ffffffff   #00000000   std
+MENU COLOR    cmdline       0;37;40   #c0ffffff   #00000000   std
+MENU COLOR    cmdmark       1;36;40   #c000ffff   #00000000   std
+MENU COLOR    disabled      1;30;44   #60cccccc   #00000000   std
+MENU COLOR    help          0;37;40   #c0ffffff   #00000000   std
+MENU COLOR    hotkey        0;35;40   #90ffff00   #00000000   std
+MENU COLOR    hotsel        0;35;40   #90000000   #bb9999aa   all
+MENU COLOR    msg07         0;37;40   #90ffffff   #00000000   std
+MENU COLOR    pwdborder     0;30;47   #80ffffff   #20ffffff   std
+MENU COLOR    pwdentry      0;30;47   #80ffffff   #20ffffff   std
+MENU COLOR    pwdheader     0;31;47   #eeff1010   #20ffffff   std
+MENU COLOR    screen        0;37;40   #80ffffff   #00000000   std
+MENU COLOR    scrollbar     0;30;44   #40000000   #00000000   std
+MENU COLOR    sel           7;37;40   #ff000000   #bb9999aa   all
+MENU COLOR    tabmsg        0;31;40   #90ffff00   #00000000   std
+MENU COLOR    timeout       0;31;47   #eeff1010   #00000000   none
+MENU COLOR    timeout_msg   0;35;40   #90ffffff   #00000000   none
+MENU COLOR    title         1;34;49   #eea0a0ff   #cc333355   std
+MENU COLOR    unsel         0;37;44   #90ffffff   #00000000   std
