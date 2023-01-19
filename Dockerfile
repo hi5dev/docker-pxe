@@ -15,11 +15,11 @@ ENV PATH="$PATH:/usr/libexec/docker-pxe"
 # install and configure dnsmasq for DNS proxy and DHCP/TFTP server
 RUN setup-dnsmasq
 
-# install and configure memtest for the default boot image
-RUN setup-memtest
-
 # syslinux is a suite of bootloaders, one of which is PXELINUX
 RUN setup-syslinux
+
+# iPXE build for Alpine Linux netboot
+RUN setup-ipxe
 
 # copy configuration files
 COPY ./etc/ /etc/

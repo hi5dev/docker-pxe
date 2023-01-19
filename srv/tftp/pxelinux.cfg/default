@@ -1,13 +1,13 @@
 # https://wiki.syslinux.org/wiki/index.php?title=Menu
 
-DEFAULT memtest86
+DEFAULT alpine
   SAY Now booting in the PXE Boot MENU...
 
-LABEL memtest86
-  MENU LABEL Memtest86+
-  KERNEL /mt86plus/memtest32.bin
+LABEL alpine
+  MENU LABEL Alpine Linux
+  KERNEL /alpine-ipxe/ipxe.lkrn
 
-MENU TITLE Boot Menu
+MENU TITLE Net Boot
 
 INCLUDE pxelinux.cfg/theme.menu
 INCLUDE pxelinux.cfg/layout.menu
